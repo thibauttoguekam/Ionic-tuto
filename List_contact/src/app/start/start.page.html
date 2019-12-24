@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>
+       List contact
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  <ion-list>
+    <ion-item *ngFor="let contact of contacts" [routerLink]="['/start', contact.id]">
+      <ion-avatar slot="start"> 
+        <ion-img [src]="contact.url1" alt="person-icon-7"></ion-img>
+      </ion-avatar>
+      <ion-label>{{contact.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+    
+  </ion-content>
+  
